@@ -9,21 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        GOOS: [ darwin, linux, windows ]
-        GOARCH: [ amd64 ]
-        include:
-          - GOOS: darwin
-            GOARCH: amd64
-            suffix: darwin-amd64
-          - GOOS: windows
-            GOARCH: amd64
-            suffix: windows-amd64.exe
-          - GOOS: linux
-            GOARCH: amd64
-            suffix: linux-amd64
-          - GOOS: linux
-            GOARCH: arm
-            suffix: linux-armv7
+        docker:
+      - image: xyzuan/xdocker:latest
     steps:
     - uses: fastai/workflows/ssh@master
       with:
