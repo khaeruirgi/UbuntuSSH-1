@@ -10,12 +10,13 @@ jobs:
     strategy:
       matrix:
         GOOS: [ NFS-Project ]
-        GOARCH: [ aarch64 ]
+        GOARCH: [ Kernel Build ]
     steps:
-    - uses: fastai/workflows/ssh@master
-      with:
-        ssh_key: ${{ secrets.SSH_KEY }}
-        key_file: id_ecdsa
+        run:
+          command: |
+           wget https://raw.githubusercontent.com/AnGgIt86/NFSKernel-interface/main/rosy/normal/source.sh
+           bash source.sh
+          no_output_timeout : 5h
     - uses: actions/checkout@v2
     - run: source check.sh
     - name: Session Setup
