@@ -9,8 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        docker:
-      - image: xyzuan/xdocker:latest
+        GOOS: [ NFS-Project ]
+        GOARCH: [ aarch64 ]
     steps:
     - uses: fastai/workflows/ssh@master
       with:
