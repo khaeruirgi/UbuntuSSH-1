@@ -1,10 +1,9 @@
-name: UbuntuSSH
+name: Test
 on: 
   workflow_dispatch:
 defaults:
   run:
     shell: bash
-
 jobs:
   build:
     runs-on: ubuntu-latest
