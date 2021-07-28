@@ -9,10 +9,21 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        GOOS: [ NFS-Project ]
-        GOARCH: [ Step 1 ]
-        GOOS: [ NFS-Project ]
-        GOARCH: [ Step 2 ]
+        GOOS: [ darwin, linux, windows ]
+        GOARCH: [ amd64 ]
+        include:
+          - GOOS: darwin
+            GOARCH: amd64
+            suffix: darwin-amd64
+          - GOOS: windows
+            GOARCH: amd64
+            suffix: windows-amd64.exe
+          - GOOS: linux
+            GOARCH: amd64
+            suffix: linux-amd64
+          - GOOS: linux
+            GOARCH: arm
+            suffix: linux-armv7
     steps:
     - uses: actions/checkout@v2
     - name: Session Setup
