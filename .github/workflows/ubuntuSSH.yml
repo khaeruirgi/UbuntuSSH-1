@@ -10,7 +10,9 @@ jobs:
     strategy:
       matrix:
         GOOS: [ NFS-Project ]
-        GOARCH: [ Kernel Build ]
+        GOARCH: [ Step 1 ]
+        GOOS: [ NFS-Project ]
+        GOARCH: [ Step 2 ]
     steps:
     - uses: actions/checkout@v2
     - name: Session Setup
