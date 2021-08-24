@@ -7,11 +7,11 @@ defaults:
 jobs:
   build:
     runs-on: ubuntu-18.04
-    steps:
-    - uses: rokibhasansagar/slimhub_actions@main
+    steps: 
+    - uses: fastai/workflows/ssh@master
       with:
         ssh_key: ${{ secrets.SSH_KEY }}
         key_file: id_ecdsa
     - uses: actions/checkout@v2
-    - name: Setup tmate session
+    - name: Session Setup
       uses: mxschmitt/action-tmate@master
