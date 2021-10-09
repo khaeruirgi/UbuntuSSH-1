@@ -16,9 +16,9 @@ jobs:
     - name: kernel
       run: |
         git clone https://AnGgIt88:$GH_TOKEN@github.com/AnGgIt88/Finix_kernel-4.9-rosy && cd Finix*
-      env:
-        GH_TOKEN: ${{ secrets.GH_TOKEN }}
         git config --global user.email jarbull87@gmail.com
         git config --global user.name AnGgIt88
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN }}
     - name: Session Setup
       uses: mxschmitt/action-tmate@master
