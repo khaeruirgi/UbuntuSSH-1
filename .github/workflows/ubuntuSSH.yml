@@ -18,7 +18,7 @@ jobs:
         git clone https://AnGgIt88:$GH_TOKEN@github.com/AnGgIt88/Finix_kernel-4.9-rosy -b eleven && cd Finix*
         git config --global user.email jarbull87@gmail.com
         git config --global user.name AnGgIt88
-        git remote add mido https://github.com/smokey18/kernel_xiaomi_mido && git fetch mido eleven
+        git fetch https://android.googlesource.com/kernel/common android-4.9-q
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
     - name: Session Setup
