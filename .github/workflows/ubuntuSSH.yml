@@ -13,6 +13,9 @@ jobs:
         ssh_key: ${{ secrets.SSH_KEY }}
         key_file: id_ecdsa
     - uses: actions/checkout@v2
+    - name: kernel
+      run: |
+        bash kernel.sh
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
     - name: Session Setup
