@@ -19,6 +19,8 @@ jobs:
         export TZ=Asia/Jakarta
         sudo apt-get -y update && sudo apt-get -y upgrade
         sudo apt-get update --fix-missing
+        git config --global user.email jarbull87@gmail.com
+        git config --global user.name AnGgIt88
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
     - name: Session Setup
