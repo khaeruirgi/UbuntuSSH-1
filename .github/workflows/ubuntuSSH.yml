@@ -1,4 +1,4 @@
-name: UbuntuSSH
+name: Kucung
 on: 
   workflow_dispatch:
 defaults:
