@@ -19,5 +19,4 @@ jobs:
       env:
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
     - name: Session Setup
-      timeout-minutes: 340
       uses: mxschmitt/action-tmate@master
